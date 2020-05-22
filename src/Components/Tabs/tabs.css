@@ -11,3 +11,8 @@
   text-align: left;
   margin-left: 5%;
 }
+
+.links {
+  text-decoration: none;
+  color: black;
+}
