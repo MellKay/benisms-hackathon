@@ -1,0 +1,12 @@
+.TAGWrapper {
+  width: 90%;
+  margin-left: 5%;
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
+  height: auto;
+  max-height: 75vh;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  box-shadow: 2px 2px rgb(150, 150, 150);
+  margin-top: 20px;
+}
