@@ -1,0 +1,27 @@
+.formInput {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  width: 90%;
+  margin-bottom: 20px;
+  line-height: 1.8em;
+  box-shadow: 2px 2px rgb(150, 150, 150);
+}
+
+.labels {
+  display: block;
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: 5px;
+}
+
+.addButton {
+  font-family: "Nunito", sans-serif;
+  float: right;
+  margin-right: 5%;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px rgb(150, 150, 150);
+}
