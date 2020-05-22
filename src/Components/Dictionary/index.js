@@ -21,11 +21,8 @@ function Dictionary() {
     getFetchData();
   }, []);
 
-  console.log(fetchData);
-
   function handleChange(e) {
     setSearchTerm(e.target.value);
-    console.log(e.target.value);
   }
 
   function clearSearch() {
@@ -42,15 +39,32 @@ function Dictionary() {
         value={searchTerm}
         onBlur={clearSearch}
       />
-      {fetchData.map((item) => {
-        return (
-          <>
-            <p style={{ fontWeight: "bold" }}> {item.benismName}: </p>
-            <p> {item.benismDef}</p>
-            <hr style={{ width: "90%" }} />
-          </>
-        );
-      })}
+      {searchTerm === ""
+        ? fetchData.map((item) => {
+            return (
+              <>
+                <p style={{ fontWeight: "bold" }}> {item.benismName}: </p>
+                <p> {item.benismDef}</p>
+                <hr style={{ width: "90%" }} />
+              </>
+            );
+          })
+        : fetchData
+            .filter(function (item) {
+              return (
+                item.benismName
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase()) ||
+                item.benismDef.toLowerCase().includes(searchTerm.toLowerCase())
+              );
+            })
+            .map((item) => (
+              <>
+                <p style={{ fontWeight: "bold" }}> {item.benismName}: </p>
+                <p> {item.benismDef}</p>
+                <hr style={{ width: "90%" }} />
+              </>
+            ))}
     </div>
   );
 }
