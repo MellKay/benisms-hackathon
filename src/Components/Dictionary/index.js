@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const dummyData = [
   {
@@ -18,10 +18,27 @@ const dummyData = [
 ];
 
 function Dictionary() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  function handleChange(e) {
+    setSearchTerm(e.target.value);
+    console.log(e.target.value);
+  }
+
+  function clearSearch() {
+    setSearchTerm("");
+  }
+
   return (
     <div className="wrapper">
       <h2 className="tabTitle"> Dictionary </h2>
-      <input placeholder="Search For a Benism..." className="searchBar" />
+      <input
+        placeholder="Search For a Benism..."
+        className="searchBar"
+        onChange={handleChange}
+        value={searchTerm}
+        onBlur={clearSearch}
+      />
       {dummyData.map((item) => {
         return (
           <>
