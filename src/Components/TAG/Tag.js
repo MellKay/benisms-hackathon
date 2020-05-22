@@ -43,7 +43,7 @@ function Tag() {
       <h2 className="tabTitle"> Tenuous Analogy Generator </h2>
       <div id="tagInput">
         <input value={tagInput} onChange={handleChange} />
-        <button>Submit</button>
+        <button onClick={handleClick}>Submit</button>
       </div>
       {showTag && (
         <h3>{`Ben says: A ${tagInput} is like ${
