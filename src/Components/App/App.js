@@ -1,17 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Title from "../Title";
-import Dictionary from "../Dictionary";
-import Tabs from "../Tabs";
+import React from 'react';
+import './App.css';
+import Title from '../Title';
+import Dictionary from '../Dictionary';
+import Tabs from '../Tabs';
+import Form from '../Form/index';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Title />
-      <div className="tabWrapper">
+      <div className='tabWrapper'>
         <Tabs />
         <Dictionary />
+        <Form />
       </div>
     </div>
   );
