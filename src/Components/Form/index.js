@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 
 function Form() {
   return (
-    <div className='formWrapper'>
-      <form className='f1'>
+    <div className="wrapper">
+      <form className="f1">
         <label>
           Name:
-          <input type='text' name='name' placeholder='Name' />
+          <input type="text" name="name" placeholder="Name" />
         </label>
       </form>
-      <form className='f2'>
+      <form className="f2">
         <label>
           Description:
-          <textarea placeholder='Description' rows='4' cols='50' />
+          <textarea placeholder="Description" rows="4" cols="50" />
         </label>
       </form>
-      <button type='submit'> Submit</button>
+      <button type="submit"> Submit</button>
     </div>
   );
 }

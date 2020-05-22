@@ -13,10 +13,18 @@ function App() {
         <Title />
         <Switch>
           <Route path="/add">
-            <Form />
+            <div className="tabWrapper">
+              <Tabs />
+              <Form />
+            </div>
           </Route>
           <Route path="/tag">
-            <p> its coming </p>
+            <div className="tabWrapper">
+              <Tabs />
+              <div className="wrapper">
+                <p> its coming </p>
+              </div>
+            </div>
           </Route>
           <Route path="/">
             <div className="tabWrapper">
