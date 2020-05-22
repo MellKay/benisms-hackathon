@@ -5,6 +5,7 @@ import Form from "../Form/index";
 import Dictionary from "../Dictionary";
 import Tabs from "../Tabs";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Tag from "../TAG/Tag";
 
 function App() {
   return (
@@ -21,9 +22,7 @@ function App() {
           <Route path="/tag">
             <div className="tabWrapper">
               <Tabs />
-              <div className="wrapper">
-                <p> its coming </p>
-              </div>
+              <Tag />
             </div>
           </Route>
           <Route path="/">
