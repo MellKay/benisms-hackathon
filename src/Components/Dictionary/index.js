@@ -2,6 +2,11 @@ import React, { useState } from "react";
 
 const dummyData = [
   {
+    name: "Nice! ",
+    description:
+      "The word that Ben adds to the end of almost every sentence that he says.",
+  },
+  {
     name: "Dolla Squigs",
     description: "The unofficial bootcamp #3 term for string interpolation.",
   },
@@ -15,6 +20,7 @@ const dummyData = [
     description:
       "One of the many energizers Ben came up with; It involves throwing a ball into a bin, and if it lands in Ben will sing you a question and you must get both the answer and the song correct for points.",
   },
+  { name: "Yes Yes", description: "Bens call to action." },
 ];
 
 function Dictionary() {

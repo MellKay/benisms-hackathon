@@ -31,7 +31,7 @@ function Tabs() {
           style={
             dictionaryIsClicked
               ? null
-              : { backgroundColor: "rgb(250, 250, 250)" }
+              : { backgroundColor: "rgb(250, 250, 250)", fontWeight: "normal" }
           }
           onClick={handleDictionaryClick}
         >
@@ -42,7 +42,9 @@ function Tabs() {
         <div
           className="tab"
           style={
-            addIsClicked ? null : { backgroundColor: "rgb(250, 250, 250)" }
+            addIsClicked
+              ? null
+              : { backgroundColor: "rgb(250, 250, 250)", fontWeight: "normal" }
           }
           onClick={handleAddClick}
         >
@@ -53,7 +55,9 @@ function Tabs() {
         <div
           className="tab"
           style={
-            tagIsClicked ? null : { backgroundColor: "rgb(250, 250, 250)" }
+            tagIsClicked
+              ? null
+              : { backgroundColor: "rgb(250, 250, 250)", fontWeight: "normal" }
           }
           onClick={handleTagClick}
         >
