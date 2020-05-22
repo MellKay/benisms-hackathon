@@ -1,30 +1,27 @@
-import React, { useState } from "react";
-
-const dummyData = [
-  {
-    name: "Nice! ",
-    description:
-      "The word that Ben adds to the end of almost every sentence that he says.",
-  },
-  {
-    name: "Dolla Squigs",
-    description: "The unofficial bootcamp #3 term for string interpolation.",
-  },
-  {
-    name: "Baby Function",
-    description:
-      "Created by Vini and then shamelessly stolen by Ben, this is an alternative name for fat arrow functions.",
-  },
-  {
-    name: "Binny Pong Quizzy Song",
-    description:
-      "One of the many energizers Ben came up with; It involves throwing a ball into a bin, and if it lands in Ben will sing you a question and you must get both the answer and the song correct for points.",
-  },
-  { name: "Yes Yes", description: "Bens call to action." },
-];
+import React, { useState, useEffect } from "react";
 
 function Dictionary() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [fetchData, setFetchData] = useState([]);
+
+  useEffect(() => {
+    async function getFetchData() {
+      try {
+        const res = await fetch(
+          `https://1ho0xiq8l4.execute-api.eu-west-1.amazonaws.com/dev/list`
+        );
+        const data = await res.json();
+        if (data) {
+          setFetchData(data);
+        }
+      } catch (err) {
+        console.log(`fetch error`, err);
+      }
+    }
+    getFetchData();
+  }, []);
+
+  console.log(fetchData);
 
   function handleChange(e) {
     setSearchTerm(e.target.value);
@@ -45,11 +42,11 @@ function Dictionary() {
         value={searchTerm}
         onBlur={clearSearch}
       />
-      {dummyData.map((item) => {
+      {fetchData.map((item) => {
         return (
           <>
-            <p style={{ fontWeight: "bold" }}> {item.name}: </p>
-            <p> {item.description}</p>
+            <p style={{ fontWeight: "bold" }}> {item.benismName}: </p>
+            <p> {item.benismDef}</p>
             <hr style={{ width: "90%" }} />
           </>
         );
