@@ -10,3 +10,12 @@
   box-shadow: 2px 2px rgb(150, 150, 150);
   margin-top: 20px;
 }
+
+.TAGWrapper::after {
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgb(200, 200, 200);
+  bottom: -20px;
+  content: "";
+  position: absolute;
+  left: 30%;
+}

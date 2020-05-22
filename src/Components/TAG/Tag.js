@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../Form/index.css";
 import "./tag.css";
 
+import ben from "./Ben_Character.png";
+import chris from "./Chris_Character.png";
+
 const livingThings = [
   "bee",
   "cat",
@@ -45,6 +48,8 @@ function Tag() {
     setShowTag(false);
   }
 
+  let obj = objects[Math.floor(Math.random() * objects.length)];
+
   return (
     <>
       <div className="wrapper">
@@ -63,11 +68,39 @@ function Tag() {
       </div>
 
       {showTag && (
-        <div className="TAGWrapper">
-          <h3>{`Ben says: A ${tagInput} is like ${
-            livingThings[Math.floor(Math.random() * livingThings.length)]
-          } with ${objects[Math.floor(Math.random() * objects.length)]}`}</h3>
-        </div>
+        <>
+          <>
+            <div className="TAGWrapper">
+              <h3>{`Ben says: A ${tagInput} is like ${
+                livingThings[Math.floor(Math.random() * livingThings.length)]
+              } with ${obj}`}</h3>
+            </div>
+          </>
+
+          <img
+            src={ben}
+            alt="ben"
+            style={{
+              width: "100px",
+              position: "absolute",
+              top: "300px",
+              left: "50px",
+            }}
+          />
+          {obj === "cwissyAI" ? (
+            <img
+              src={chris}
+              alt="chris"
+              style={{
+                width: "100px",
+                position: "absolute",
+                right: "-20px",
+                top: "70vh",
+                transform: "rotate(310deg)",
+              }}
+            />
+          ) : null}
+        </>
       )}
     </>
   );
