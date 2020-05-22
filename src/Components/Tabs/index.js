@@ -38,7 +38,7 @@ function Tabs() {
           <small> Dictionary </small>
         </div>
       </Link>
-      <Link to="/" className="links">
+      <Link to="/add" className="links">
         <div
           className="tab"
           style={
@@ -49,7 +49,7 @@ function Tabs() {
           <small> Add New Benism </small>
         </div>
       </Link>
-      <Link to="/" className="links">
+      <Link to="/tag" className="links">
         <div
           className="tab"
           style={

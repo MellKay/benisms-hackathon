@@ -1,12 +1,10 @@
-
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Title from "../Title";
-    import Form from '../Form/index';
+import Form from "../Form/index";
 import Dictionary from "../Dictionary";
 import Tabs from "../Tabs";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -18,8 +16,14 @@ function App() {
             <div className="tabWrapper">
               <Tabs />
               <Dictionary />
-      <Form />
+              <Form />
             </div>
+          </Route>
+          <Route path="/add">
+            <Form />
+          </Route>
+          <Route path="/tag">
+            <p> its coming </p>
           </Route>
         </Switch>
       </div>
