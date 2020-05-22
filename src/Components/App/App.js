@@ -16,7 +16,6 @@ function App() {
             <div className="tabWrapper">
               <Tabs />
               <Dictionary />
-              <Form />
             </div>
           </Route>
           <Route path="/add">
