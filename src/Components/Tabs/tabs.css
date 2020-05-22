@@ -1,6 +1,6 @@
 .tab {
   border-radius: 5px 5px 0px 0px;
-  padding: 1px;
+  padding: 3px;
   background-color: rgb(200, 200, 200);
   width: 30%;
   display: inline;
@@ -10,4 +10,9 @@
 .tabs {
   text-align: left;
   margin-left: 5%;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
 }
