@@ -12,17 +12,17 @@ function App() {
       <div className="App">
         <Title />
         <Switch>
-          <Route path="/">
-            <div className="tabWrapper">
-              <Tabs />
-              <Dictionary />
-            </div>
-          </Route>
           <Route path="/add">
             <Form />
           </Route>
           <Route path="/tag">
             <p> its coming </p>
+          </Route>
+          <Route path="/">
+            <div className="tabWrapper">
+              <Tabs />
+              <Dictionary />
+            </div>
           </Route>
         </Switch>
       </div>
